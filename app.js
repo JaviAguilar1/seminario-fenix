@@ -197,6 +197,7 @@ function vFicha(i){
  else{
   h+=`<div class="card"><h3>💡 Idea</h3><p>${esc(m.idea)}</p><h3>🛠️ Herramienta</h3><p>${esc(m.herr)}</p>${m.tool?`<button class="pri sm" id="abrT">Abrir herramienta</button>`:''}
   <h3>🎯 Ejercicio de la semana</h3><p>${esc(m.ej)}</p>
+  ${m.prac?`<h3>🧩 En la práctica (resumen complementario)</h3><ol style="margin:4px 0;padding-left:20px">${m.prac.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>`:''}
   ${m.ojo?`<div class="ojo"><b>⚠ Ojo:</b> ${esc(m.ojo)}</div>`:''}${m.ok?`<div class="okb"><b>✓ Respaldado:</b> ${esc(m.ok)}</div>`:''}</div>`;
  }
  $('#app').innerHTML=h;$('#vol').onclick=()=>ir('plan');
@@ -288,7 +289,7 @@ function vAjus(){
  <p class="mut" id="almac"></p></div>
  <div class="card"><h2>Instalar</h2><p class="mut">Android (Chrome/Brave): menú ⋮ → "Instalar app" o "Agregar a pantalla principal". iPhone (Safari): Compartir → "Agregar a inicio".</p></div>
  <div class="card"><button class="full" id="reset" style="color:var(--bad)">Borrar todo y empezar de cero</button></div>
- <p class="mut" style="text-align:center">Seminario Fénix · Brian Tracy · v1</p>`;
+ <p class="mut" style="text-align:center">Seminario Fénix · Brian Tracy · v2</p>`;
  $('#app').innerHTML=h;
  document.querySelectorAll('[data-hn]').forEach(i=>i.oninput=()=>{S.habitos.find(x=>x.id===i.dataset.hn).n=i.value;guardar()});
  document.querySelectorAll('[data-hx]').forEach(b=>b.onclick=()=>{if(confirm('¿Quitar este hábito? Lo ya marcado queda en el historial.')){S.habitos=S.habitos.filter(x=>x.id!==b.dataset.hx);guardar();render()}});
