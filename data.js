@@ -121,6 +121,42 @@ const MODULOS = [
  ok:'Que las relaciones y el propósito predicen el bienestar tiene respaldo (estudio de Harvard sobre desarrollo adulto).'}
 ];
 
+// Claves prácticas de la playlist de respaldo (podcast "Emprender Simple"): consejos del narrador, no de Tracy.
+// Sin episodio en el respaldo: M15, M22 y M26. El M18 ya traía las suyas.
+const PRAC_RESPALDO = {
+'1':['Paz mental: un rato de meditación o silencio por día y aprender a poner límites.','Salud: alimentación balanceada, actividad física regular, dormir bien, tomar agua y hacerte los chequeos.','Relaciones: comunicación abierta, tiempo de calidad sin pantallas y empatía.'],
+'2':['Ley del control: antes de reaccionar, frená y elegí conscientemente qué hacer.','Ley del accidente: objetivo → plan → recursos → obstáculos previstos → acción constante → evaluar y ajustar.','Visualizá cada día tu meta como si ya estuviera cumplida y actuá en línea con lo que esperás.'],
+'3':['Separá lo que no elegiste (temperamento) de lo que podés sumar (educación, idiomas, hábitos, resiliencia) y elegí uno para trabajar.','Miedo al fracaso: enfocate en el esfuerzo, no en el resultado, y aceptá que fallar es parte.','Miedo al rechazo: exponete de a poco y recordá que el rechazo es subjetivo, no una medida de tu valor.'],
+'4':['Diario de gratitud y logros: cada noche, 3 cosas por las que agradecés y 1 logro del día.','Rodeate de influencias positivas (gente, lecturas, audios).','Visualizá y afirmá tus metas a diario; cortá la duda con la ley de sustitución.'],
+'5':['Registro de excusas: anotá cada excusa que te escuchás decir durante una semana.','Cambiá el lenguaje interno: de "no puedo" a "¿cómo podría?".','Empezá asumiendo responsabilidades chicas y aprendé del error en lugar de culparte.'],
+'6':['Cuando algo pase, no lo juzgues de entrada.','Desidentificate: no te lo tomes personal.','Cortá con la culpa (hacia otros y hacia vos) y decí "soy responsable".'],
+'7':['Practicá la gratitud y el cuidado personal.','Escucha activa y aceptar la vulnerabilidad con la gente cercana.','Si la culpa o la crítica interna pesan mucho, buscá ayuda profesional.'],
+'8':['Destructor de preocupaciones en 5 pasos: 1) definila por escrito, 2) el peor desenlace, 3) aceptalo, 4) un plan para enfrentarlo, 5) actuá con propósito.'],
+'9':['Identificá una creencia limitante, cuestionala con evidencia y reemplazala.','Celebrá los logros chicos para reforzar la nueva creencia.','Cambiá de a un hábito por vez y sé persistente.'],
+'10':['Afirmaciones claras, específicas y creíbles, dichas con emoción y repetidas todos los días.','Visualizá con mucho detalle y conectate con la emoción.','Asumí el papel: ante un desafío, preguntate cómo lo encararía tu "yo futuro".'],
+'11':['Etiquetas viejas: buscá evidencia en tu vida que las contradiga y reemplazalas.','Perdón y foco en el presente.','Rutina de cuidado personal y planificar el día.'],
+'12':['Tarjetas de afirmaciones siempre encima y leerlas con convicción.','Horario fijo (mañana y noche), rotando las afirmaciones cada tanto.'],
+'13':['Calendario de repaso espaciado (por ejemplo: 1 día, 3 días, 1 semana, 1 mes).','Metas de aprendizaje concretas y un registro de avances.','Celebrá los logros intermedios y probá distintas formas de aprender.'],
+'14':['Elegí 3 metas, armá las afirmaciones y prepará el entorno (sin interrupciones).','Sentado erguido y relajado; repetición diaria con disciplina.'],
+'16':['Reviví el deseo con frecuencia: releé tu "por qué" y convertilo en compromiso.'],
+'17':['Mismas claves que el original: metas claras, plan escrito, prioridades, concentración y equilibrio.'],
+'19':['Confiá en la intuición y actuá apenas llega la idea.','Disparadores de ideas: soñar despierto, música clásica, caminar en la naturaleza.','Aprendé de cada experiencia, aunque parezca un retroceso.'],
+'20':['Para cada problema: claridad, concentración, mente abierta, tormenta de ideas y, al final, inspeccionar lo que se espera.'],
+'21':['Metas SMART: específicas, medibles, alcanzables, relevantes y con plazo.','Disciplina: rutinas, recordatorios visuales, registro y alguien que te acompañe.','Suplementos: siempre con consulta profesional.','Estrés: ejercicio, alimentación, descanso, cambio de entorno, gratitud y hablar con un profesional si hace falta.'],
+'23':['Mismas 7 formas de hacer sentir importante al otro; empezá por eliminar la crítica destructiva.'],
+'24':['Honestidad y dignidad en la pareja; ante la incompatibilidad, no culpar.','No te dejes llevar por la presión del entorno ("qué dirán").'],
+'25':['Elogio sincero y específico: "resolviste muy bien ese problema" en vez de "sos inteligente".','Refuerzo positivo con equilibrio (sin elogiar en exceso).','Fomentá que el chico valore su propio esfuerzo (autoevaluación).']
+};
+MODULOS.forEach(m=>{if(!m.prac&&PRAC_RESPALDO[m.n])m.prac=PRAC_RESPALDO[m.n]});
+
+// Extra (no es un módulo del seminario): lista de Tracy resumida en el respaldo 02
+const EXTRA_10CLAVES = {n:'+',b:'Extra',t:'10 claves del éxito',
+ idea:'Lista de Brian Tracy (no forma parte de los 26 módulos), tomada del podcast de respaldo.',
+ herr:'Repasala una vez por semana, en la revisión del domingo.',
+ ej:'Elegí la clave más floja y definí una acción concreta para esta semana.',
+ prac:['Hacé lo que te gusta.','Decidí exactamente lo que querés.','Respaldá tu meta con persistencia y determinación.','Sé aprendiz de por vida.','Usá bien tu tiempo.','Seguí a los líderes.','(La clave 7 no se distingue en el audio.)','Usá tu creatividad innata.','Seguí la regla de oro.','Pagá el precio del éxito.'],
+ ojo:'Viene de un podcast que resume a Tracy, no del seminario original.'};
+
 const HABITOS_SUG = ['Metas escritas','Tarea A1 terminada','Leer 30–60 minutos','Ejercicio','Cero crítica destructiva','Tiempo de calidad con la familia o el hijo','Escuchar antes de hablar','"Soy responsable" en lugar de culpar','Dormir 7 horas o más'];
 
 const FICHAS = [

@@ -188,12 +188,14 @@ function vPlan(){
   const st=i<S.mod?'✅':i===S.mod?'▶️':'🔒';
   h+=`<div class="it ${i>S.mod?'lock':''}" data-i="${i}">${st} <b>M${m.n}</b> · ${esc(m.t)}</div>`;
  });
+ h+=`<div class="mut" style="padding:10px 10px 2px;font-weight:700">Extra</div><div class="it" data-x="1">⭐ ${esc(EXTRA_10CLAVES.t)}</div>`;
  h+='</div>';$('#app').innerHTML=h;
  document.querySelectorAll('[data-i]').forEach(e=>e.onclick=()=>ir('plan',+e.dataset.i));
+ document.querySelectorAll('[data-x]').forEach(e=>e.onclick=()=>ir('plan','x'));
 }
 function vFicha(i){
- const m=MODULOS[i];let h=`<button class="back" id="vol">‹ Plan</button><span class="pill">${esc(m.b)}</span><h1>M${m.n} · ${esc(m.t)}</h1>`;
- if(i>S.mod){h+=`<div class="card">🔒 Se desbloquea cuando completes las semanas anteriores (5 de 7 días cada una).</div>`}
+ const x=i==='x',m=x?EXTRA_10CLAVES:MODULOS[i];let h=`<button class="back" id="vol">‹ Plan</button><span class="pill">${esc(m.b)}</span><h1>${x?'':'M'+m.n+' · '}${esc(m.t)}</h1>`;
+ if(!x&&i>S.mod){h+=`<div class="card">🔒 Se desbloquea cuando completes las semanas anteriores (5 de 7 días cada una).</div>`}
  else{
   h+=`<div class="card"><h3>💡 Idea</h3><p>${esc(m.idea)}</p><h3>🛠️ Herramienta</h3><p>${esc(m.herr)}</p>${m.tool?`<button class="pri sm" id="abrT">Abrir herramienta</button>`:''}
   <h3>🎯 Ejercicio de la semana</h3><p>${esc(m.ej)}</p>
