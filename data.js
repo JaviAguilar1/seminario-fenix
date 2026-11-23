@@ -122,7 +122,7 @@ const MODULOS = [
 ];
 
 // Claves prácticas de la playlist de respaldo (podcast "Emprender Simple"): consejos del narrador, no de Tracy.
-// Sin episodio en el respaldo: M15, M22 y M26. El M18 ya traía las suyas.
+// M15, M22 y M26 no tienen episodio en el respaldo: sus claves salen del original. El M18 ya traía las suyas.
 const PRAC_RESPALDO = {
 '1':['Paz mental: un rato de meditación o silencio por día y aprender a poner límites.','Salud: alimentación balanceada, actividad física regular, dormir bien, tomar agua y hacerte los chequeos.','Relaciones: comunicación abierta, tiempo de calidad sin pantallas y empatía.'],
 '2':['Ley del control: antes de reaccionar, frená y elegí conscientemente qué hacer.','Ley del accidente: objetivo → plan → recursos → obstáculos previstos → acción constante → evaluar y ajustar.','Visualizá cada día tu meta como si ya estuviera cumplida y actuá en línea con lo que esperás.'],
@@ -138,14 +138,17 @@ const PRAC_RESPALDO = {
 '12':['Tarjetas de afirmaciones siempre encima y leerlas con convicción.','Horario fijo (mañana y noche), rotando las afirmaciones cada tanto.'],
 '13':['Calendario de repaso espaciado (por ejemplo: 1 día, 3 días, 1 semana, 1 mes).','Metas de aprendizaje concretas y un registro de avances.','Celebrá los logros intermedios y probá distintas formas de aprender.'],
 '14':['Elegí 3 metas, armá las afirmaciones y prepará el entorno (sin interrupciones).','Sentado erguido y relajado; repetición diaria con disciplina.'],
+'15':['Hacé el ejercicio de las 7 preguntas (30 segundos cada una) y guardá las respuestas.','Equilibrá tus metas: personales y familiares (por qué), de carrera (qué) y de autodesarrollo (cómo).','Elegí tu Propósito Definido Principal (#1) y escribilo donde lo veas todos los días.'],
 '16':['Reviví el deseo con frecuencia: releé tu "por qué" y convertilo en compromiso.'],
 '17':['Mismas claves que el original: metas claras, plan escrito, prioridades, concentración y equilibrio.'],
 '19':['Confiá en la intuición y actuá apenas llega la idea.','Disparadores de ideas: soñar despierto, música clásica, caminar en la naturaleza.','Aprendé de cada experiencia, aunque parezca un retroceso.'],
 '20':['Para cada problema: claridad, concentración, mente abierta, tormenta de ideas y, al final, inspeccionar lo que se espera.'],
 '21':['Metas SMART: específicas, medibles, alcanzables, relevantes y con plazo.','Disciplina: rutinas, recordatorios visuales, registro y alguien que te acompañe.','Suplementos: siempre con consulta profesional.','Estrés: ejercicio, alimentación, descanso, cambio de entorno, gratitud y hablar con un profesional si hace falta.'],
+'22':['Autodiagnóstico semanal: ¿cuál de las 6 causas de estrés me está pegando ahora?','Cerrá un asunto pendiente: escribí la carta de cierre (responsabilidad 100%, perdón 100%, deseale lo mejor).','Ante un malestar, preguntate "¿qué no estoy enfrentando?" y "¿qué es lo peor que podría pasar?".','Hacé una cosa que temas, chiquita, y decite "puedo hacerlo".'],
 '23':['Mismas 7 formas de hacer sentir importante al otro; empezá por eliminar la crítica destructiva.'],
 '24':['Honestidad y dignidad en la pareja; ante la incompatibilidad, no culpar.','No te dejes llevar por la presión del entorno ("qué dirán").'],
-'25':['Elogio sincero y específico: "resolviste muy bien ese problema" en vez de "sos inteligente".','Refuerzo positivo con equilibrio (sin elogiar en exceso).','Fomentá que el chico valore su propio esfuerzo (autoevaluación).']
+'25':['Elogio sincero y específico: "resolviste muy bien ese problema" en vez de "sos inteligente".','Refuerzo positivo con equilibrio (sin elogiar en exceso).','Fomentá que el chico valore su propio esfuerzo (autoevaluación).'],
+'26':['Escribí tu misión en una frase: ¿a quién servís y cómo?','Cada día, un acto concreto de servicio o de amor (decir te quiero, ayudar, agradecer).','Revisá los 7 pasos al final del día: ¿cuál practicaste hoy?']
 };
 MODULOS.forEach(m=>{if(!m.prac&&PRAC_RESPALDO[m.n])m.prac=PRAC_RESPALDO[m.n]});
 
